@@ -1,0 +1,58 @@
+Given an array of nums (integers), return the number with the value closest to 0 in nums.
+if there are multiple answers, return the number with the largest value. 
+(leetcode 2239)
+
+
+so for example:
+if nums = [-4,-2,1,4,8]
+
+the output should be 1
+
+since its closest to 0
+
+if nums = [-1,1]
+the output should be 1 since it should return the largest between the 2.
+
+if nums = [-4,5]
+the output should be -4.
+
+
+--------
+
+lets break it down:
+
+MOST IMPORTANT - we need to check the closest to 0, -3 and 3 close to 0 the same, so we should concider all nums as positive ! 
+
+we store the last closest so we can compare it in each itteration.
+
+we should itterate over all numbers, since each can be closest to 0.
+
+after itterate we should find the mirror of the closest, so if there is -3 and 3 we should return 3.
+ 
+finally we can return the value of the largest if it mirrored to the closest or return the closest.
+
+---------
+
+
+cheatsheet -
+
+    Math.abs: 
+        Math.abs(-1) === 1        //return the absolute value of an integer, so if its negative it become positive
+
+
+-----
+bonus tip
+
+
+there is faster solution but its less readable in my prespective:
+
+nums.reduce((acc,num) => {
+    if(Math.abs(num) < Math.abs(acc)) {
+        return num;
+    } else if(Math.abs(num) === Math.abs(acc)){
+        return Math.max(num,acc);
+    } else {
+        return acc;
+    }
+});
+    

@@ -1,0 +1,11 @@
+{
+  "name": "js-cheatsheet",
+  "version": "1.0.0",
+  "description": "leetcode for day to day issues and interview questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Adir",
+  "license": "ISC"
+}
