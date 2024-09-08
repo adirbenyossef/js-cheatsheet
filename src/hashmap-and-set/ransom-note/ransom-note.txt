@@ -1,0 +1,30 @@
+383. Ransom Note
+
+Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.
+
+Each letter in magazine can only be used once in ransomNote.
+
+
+Example 1:
+
+Input: ransomNote = "a", magazine = "b"
+Output: false
+Example 2:
+
+Input: ransomNote = "aa", magazine = "ab"
+Output: false
+Example 3:
+
+Input: ransomNote = "aa", magazine = "aab"
+Output: true
+ 
+
+lets break it down -
+ransomNote should be constructed by magazine, each char in ransomNote should appear in magazine, if not return false, 
+if the char appear in magazine but only once and in ransomNote twice return false.
+
+so its pretty simple, we need first to create array of chars from magazine, using magazine.split('');
+then we can simply iterate over the ransomNote chars and check if the index of a letter exist, by indexOf() method, 
+if the indexOf char is -1 -> return false, since this char missing in the magazine.
+if we have the char, set the founded index to be null -> so it return false for next iteration or find the next index.
+after going over everything (did not exit before) return true.

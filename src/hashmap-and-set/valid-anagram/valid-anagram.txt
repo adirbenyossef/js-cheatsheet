@@ -1,0 +1,26 @@
+242 Valid Anagram
+
+Given two strings s and t, return true if t is an 
+anagram
+ of s, and false otherwise.
+
+ 
+
+Example 1:
+
+Input: s = "anagram", t = "nagaram"
+
+Output: true
+
+Example 2:
+
+Input: s = "rat", t = "car"
+
+Output: false
+
+
+---
+
+anagram is valid only if 2 strings have the same letters, no matter the order,
+so basically the fastest way approach is to use counter set, the char and the amount of appearances, 
+if the strings does not contain the same amount of chars return false
