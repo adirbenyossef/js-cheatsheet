@@ -1,0 +1,30 @@
+1189. Maximum Number of Balloons
+
+Given a string text, you want to use the characters of text to form as many instances of the word "balloon" as possible.
+
+You can use each character in text at most once. Return the maximum number of instances that can be formed.
+
+ 
+
+Example 1:
+Input: text = "nlaebolko"
+Output: 1
+
+Example 2:
+Input: text = "loonbalxballpoon"
+Output: 2
+
+Input: text = "leetcode"
+Output: 0
+
+
+we need here check in a string if there is other string, pretty simple for one, but when you need to find 100, its become difficult,
+another thing need to take in mind is that this text contain double O and double L.
+
+so basically what need to do here is to sum all the numbers of the letters,
+for example: { b: 3, a: 3, l: 6, o: 6, n: 2 };
+
+lowestDivided = the lowest value of divided L or O
+check if there lowest or equal in 'b', 'a' or 'n' 
+
+and return the lowest between them.
